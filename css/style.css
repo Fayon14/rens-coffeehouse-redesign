@@ -233,6 +233,6 @@ html{scroll-behavior:smooth}
 .gallery figure{overflow:hidden;border-radius:14px}
 .gallery figure img{transition:transform .35s ease}
 .gallery figure:hover img{transform:scale(1.045)}
-.newsletter{position:relative}
+.newsletter{position:relative;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .newsletter::after{content:"";display:none}
-.newsletter.sent::after{content:"Thanks! The live site wires this straight into Ren's mailing list.";display:block;font-size:.78rem;color:rgba(246,239,227,.85);margin-top:6px}
+.newsletter.sent::after{content:"Thanks! The live site wires this straight into Ren's mailing list.";flex-basis:100%;font-size:.78rem;color:rgba(246,239,227,.85);margin-top:2px}
