@@ -60,8 +60,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,239,227,.94);backdro
 }
 
 /* reveal on scroll */
-[data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;transition-delay:var(--d,0ms)}
-[data-reveal].revealed{opacity:1;transform:none}
+html.js [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;transition-delay:var(--d,0ms)}
+html.js [data-reveal].revealed{opacity:1;transform:none}
 
 /* hero */
 .hero{background:linear-gradient(160deg,#f6efe3 55%,#efe3cd);padding:64px 0 60px}
@@ -175,7 +175,7 @@ footer a{color:#f6efe3}
 
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  [data-reveal]{opacity:1;transform:none}
+  html.js [data-reveal]{opacity:1;transform:none}
 }
 /* Social icons */
 .socials{display:flex;gap:14px;align-items:center;margin-top:10px}
@@ -186,3 +186,6 @@ footer a{color:#f6efe3}
 /* Two-column card grid for the full fall 16 */
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media (max-width:700px){.grid-2{grid-template-columns:1fr}}
+
+/* consistent table columns across menu boards */
+table.menu th:first-child,table.menu td:first-child{width:50%}

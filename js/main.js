@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 (function(){
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
