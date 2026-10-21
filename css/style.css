@@ -63,7 +63,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,239,227,.94);backdro
 .nav-drop a{display:block;padding:9px 16px;color:var(--ink-soft);text-decoration:none;white-space:nowrap;border-radius:8px;margin:0 6px;width:auto}
 .nav-drop a:hover{background:var(--cream);color:var(--terra-deep)}
 .nav-drop a.active{color:var(--terra-deep)}
-.nav-cta{border:1.5px solid var(--terra);color:var(--terra-deep);border-radius:999px;padding:7px 15px;font-weight:600;text-decoration:none;white-space:nowrap;transition:background .2s ease,color .2s ease}
+.nav-cta{background:var(--terra);color:#fff;border-radius:999px;padding:9px 18px;font-weight:600;text-decoration:none;white-space:nowrap;box-shadow:0 2px 10px rgba(190,84,55,.32);transition:background .2s ease,transform .18s ease,box-shadow .18s ease}
+.nav-cta:hover{background:var(--terra-deep);transform:translateY(-1px);box-shadow:0 5px 16px rgba(190,84,55,.42)}
 .nav-cta:hover{background:var(--terra);color:#fff}
 
 .mobile-nav{display:none;flex-direction:column;gap:4px;padding:8px 22px 16px;border-top:1px solid var(--line);background:var(--paper)}
@@ -222,3 +223,16 @@ table.menu th:first-child,table.menu td:first-child{width:50%}
 .flyer-events{list-style:none;margin:10px 0 0;padding:0}
 .flyer-events li{padding:7px 0;border-bottom:1px dashed var(--line);font-size:.95rem;color:var(--ink)}
 .flyer-events li:last-child{border-bottom:0}
+
+/* polish layer */
+::selection{background:var(--terra);color:#fff}
+:focus-visible{outline:2px solid var(--terra);outline-offset:2px;border-radius:4px}
+html{scroll-behavior:smooth}
+.card{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(43,29,20,.10)}
+.gallery figure{overflow:hidden;border-radius:14px}
+.gallery figure img{transition:transform .35s ease}
+.gallery figure:hover img{transform:scale(1.045)}
+.newsletter{position:relative}
+.newsletter::after{content:"";display:none}
+.newsletter.sent::after{content:"Thanks! The live site wires this straight into Ren's mailing list.";display:block;font-size:.78rem;color:rgba(246,239,227,.85);margin-top:6px}
