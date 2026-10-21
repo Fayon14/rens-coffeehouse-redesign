@@ -60,3 +60,19 @@ document.documentElement.classList.add('js');
     setTimeout(function(){ location.href=href; }, 260);
   });
 })();
+/* more dropdown */
+(function(){
+  var more = document.querySelector('.nav-more');
+  if(!more) return;
+  var btn = more.querySelector('.nav-more-btn');
+  var page = location.pathname.split('/').pop() || 'index.html';
+  if(more.querySelector('.nav-drop a[href="' + page + '"]')) more.classList.add('active');
+  function close(){ more.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = more.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(e){ if(more.classList.contains('open') && !more.contains(e.target)) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ close(); btn.blur(); } });
+})();
